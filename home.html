@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/material.min.css">
+    <script src="js/material.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/checker.js"></script>
+</head>
+<body>
+<div class="mdl-grid">
+    <!-- First Row -->
+    <div class="mdl-cell mdl-cell--2-col"></div>
+    <div class="mdl-cell mdl-cell--1-col">
+        <h4>Step 1</h4>
+    </div>
+    <div class="mdl-cell mdl-cell--6-col">
+        <form action="#">
+            <div class="mdl-textfield mdl-js-textfield" style="width: 100%;">
+                <textarea class="mdl-textfield__input" type="text" rows="2" id="statement"></textarea>
+                <label class="mdl-textfield__label" for="statement">Statement...</label>
+
+                <div class="mdl-tooltip mdl-tooltip--large" for="statement">Instructions for Step 1</div>
+            </div>
+        </form>
+    </div>
+    <div class="mdl-cell mdl-cell--2-col">
+        <div style="margin: 24px;">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+            >
+                Generate
+            </button>
+        </div>
+    </div>
+    <div class="mdl-cell mdl-cell--2-col"></div>
+</div>
+<div class="mdl-grid">
+    <!-- Second Row-->
+    <div class="mdl-cell mdl-cell--2-col"></div>
+    <div class="mdl-cell mdl-cell--1-col">
+        <h4>Step 2</h4>
+    </div>
+    <div class="mdl-cell mdl-cell--6-col">
+        <form action="#">
+            <div class="mdl-textfield mdl-js-textfield" style="width: 100%;">
+                <div id="step2"></div>
+            </div>
+        </form>
+    </div>
+    <div class="mdl-cell mdl-cell--2-col">
+        <!-- Strength Level-->
+    </div>
+    <div class="mdl-cell mdl-cell--2-col"></div>
+</div>
+
+<div class="mdl-grid">
+    <!-- Third Row-->
+    <div class="mdl-cell mdl-cell--2-col"></div>
+    <div class="mdl-cell mdl-cell--1-col">
+        <h4>Step 3</h4>
+    </div>
+    <div class="mdl-cell mdl-cell--6-col">
+        <form action="#">
+            <div class="mdl-textfield mdl-js-textfield" style="width: 100%;">
+                <div id="step3"></div>
+            </div>
+        </form>
+    </div>
+    <div class="mdl-cell mdl-cell--2-col">
+        <!-- Strength Level-->
+    </div>
+    <div class="mdl-cell mdl-cell--2-col"></div>
+</div>
+
+</body>
+</html>
