@@ -75,5 +75,3 @@ $(document).ready(function () {
         lookupDict(i.val());
     });
 });
-
-//$("#cartoon-msg").text("");
