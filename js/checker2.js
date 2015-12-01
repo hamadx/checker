@@ -74,4 +74,28 @@ $(document).ready(function () {
         var i = $('#pwdInput');
         lookupDict(i.val());
     });
+
+    $("#btn3").click(function () {
+        var password = $('#pwdInput').val();
+        var re = /[0-9\`\~\!\@\#\$\%\^\&\*\(\)\_\-\+\=\{\}\[\]\\\|\:\;\"\'\<\>\,\.\?\/]$/;
+        if (password.match(re)) {
+            console.log("Ends with a number or symbol");
+        }
+    });
+
+    $("#btn4").click(function () {
+        var password = $('#pwdInput').val();
+        var re = /^[0-9\`\~\!\@\#\$\%\^\&\*\(\)\_\-\+\=\{\}\[\]\\\|\:\;\"\'\<\>\,\.\?\/]/;
+        if (password.match(re)) {
+            console.log("Starts with a number or symbol");
+        }
+    });
+
+    $("#btn5").click(function () {
+        var password = $('#pwdInput').val();
+        var re = /^[0-9\`\~\!\@\#\$\%\^\&\*\(\)\_\-\+\=\{\}\[\]\\\|\:\;\"\'\<\>\,\.\?\/](?:.*)[0-9\`\~\!\@\#\$\%\^\&\*\(\)\_\-\+\=\{\}\[\]\\\|\:\;\"\'\<\>\,\.\?\/]$/;
+        if (password.match(re)) {
+            console.log("Starts and ends with a number or symbol");
+        }
+    });
 });
