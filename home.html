@@ -28,14 +28,18 @@
         </form>
     </div>
     <div class="mdl-cell mdl-cell--2-col">
-        <div style="margin: 24px;">
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-                    >
-                Generate
-            </button>
-        </div>
+        <!--<div style="margin: 24px;">-->
+        <!--<button class="mdl-button mdl-js-button mdl-button&#45;&#45;raised mdl-js-ripple-effect mdl-button&#45;&#45;accent"-->
+        <!--&gt;-->
+        <!--Generate-->
+        <!--</button>-->
+        <!--</div>-->
+        <select name="policy">
+            <option value="minor5-10">5 - 10 yo (4 - 6 characters)</option>
+            <option value="minor10-15">10 - 15 yo (8 - 10 characters)</option>
+            <option value="minor15plus">15+ yo (12 - 16 characters)</option>
+        </select>
     </div>
-    <div class="mdl-cell mdl-cell--2-col"></div>
 </div>
 <div class="mdl-grid">
     <!-- Second Row-->
@@ -52,8 +56,9 @@
     </div>
     <div class="mdl-cell mdl-cell--2-col">
         <!-- Strength Level-->
+        <div id="strength" class="mdl-progress mdl-js-progress"
+             style="width: 100%; margin-top: 20%; height: 8px;"></div>
     </div>
-    <div class="mdl-cell mdl-cell--2-col"></div>
 </div>
 
 <div class="mdl-grid">
@@ -70,9 +75,7 @@
         </form>
     </div>
     <div class="mdl-cell mdl-cell--2-col">
-        <!-- Strength Level-->
     </div>
-    <div class="mdl-cell mdl-cell--2-col"></div>
 </div>
 
 </body>
