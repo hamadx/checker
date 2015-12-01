@@ -3,19 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <title>Password Meter for Minors</title>
+    <link rel="stylesheet" href="css/material.min.css">
+    <script src="js/material.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/checker2.js"></script>
 </head>
 <body>
-<input title="Enter password" type="text" id="pwdInput">
-<div id="label1" style="background-color: #b3e5fc; width: 300px; height: 50px;"></div>
-<div id="label2" style="background-color: #b388ff; width: 300px; height: 50px;"></div>
 
-<button id="btn1">Strip</button><br>
-<button id="btn2">Check Dictionary</button><br>
-<button id="btn3">Ends with a number or symbol?</button><br>
-<button id="btn4">Starts with a number or symbol?</button><br>
-<button id="btn5">Has a number or a symbol in predictable place?</button><br>
-
+<div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--5-col">
+        <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--3-col">
+                Password
+            </div>
+            <div class="mdl-cell mdl-cell--8-col">
+                <input style="width: 100%" title="Enter password" type="text" id="pwdInput">
+            </div>
+        </div>
+        <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--3-col">
+                Strength
+            </div>
+            <div class="mdl-cell mdl-cell--8-col">
+                <div id="label1"
+                     style="background-color: #b3e5fc; width: 100%; height: 50px; padding-right: 8px;"></div>
+            </div>
+        </div>
+        <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--3-col">
+                Output
+            </div>
+            <div class="mdl-cell mdl-cell--8-col">
+                <div id="label2"
+                     style="background-color: #b388ff; width: 100%; height: 50px; padding-right: 8px;"></div>
+            </div>
+        </div>
+    </div>
+    <div class="mdl-cell mdl-cell--5-col"
+         style="background-image: url('./images/cartoon.png'); background-size: contain; background-repeat: no-repeat;">
+        <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--2-col"></div>
+            <div class="mdl-cell mdl-cell--10-col">
+                <p id="cartoon-msg">Message</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mdl-grid">
+    <button id="btn1">Strip</button>
+    <br>
+    <button id="btn2">Check Dictionary</button>
+    <br>
+    <button id="btn3">Ends with a number or symbol?</button>
+    <br>
+    <button id="btn4">Starts with a number or symbol?</button>
+    <br>
+    <button id="btn5">Has a number or a symbol in predictable place?</button>
+    <br>
+</div>
 </body>
 </html>
