@@ -28,7 +28,9 @@ $(document).ready(function () {
     gauge2.animationSpeed = 32;
 
     var target3 = document.getElementById('unpredictabilityGauge');
-    var gauge3 = new Gauge(target3).setOptions(opts);
+    var gauge3;
+    gauge3 = new Gauge(target3).setOptions(opts);
+    gauge3.animationSpeed = 32;
 
 
     function stripPassword(pwd) {
@@ -75,12 +77,42 @@ $(document).ready(function () {
                 console.log("complete");
             });
     }
+    function unpTest() {
 
-    $("#pwdInput").keyup(function () {
-        //alert("455");
-       // var m = $('#label1');
         var i = $('#pwdInput');
-        var s=getPasswordStrength(i.val());
+        var terms = splitToWords(i.val());
+        var removeItem = "";
+
+        terms = jQuery.grep(terms, function(value) {
+            return value != removeItem;
+        });
+        termsCount=terms.length;
+        dictTermsCount=termsCount;
+        console.log(terms);
+        $.each(terms, function( index, value ) {
+            lookupDict(value,updateDict);
+        });
+
+    }
+    var pwdInput = $('#pwdInput');
+    pwdInput.lastValue = "";
+    var timeout;
+    pwdInput.keyup(function () {
+       // var m = $('#label1');
+        var i = pwdInput.val();
+        if(i !=  pwdInput.lastValue) {
+            // Save the "last" value
+            $('#pwdInput').lastValue = i;
+            // Delay before search in the case of typing
+            if(timeout) { clearTimeout(timeout); }
+            // Start new time out
+            timeout = setTimeout(function() {
+                // Do the search!
+                console.warn("Doing search for " + i + ", time waited");
+                unpTest();
+            },1000);
+        }
+        var s=getPasswordStrength(i);
         /**switch(s){
             case 0: m.text('Weak'); break;
             case 1: m.text('Medium'); break;
@@ -90,7 +122,7 @@ $(document).ready(function () {
 
         gauge1.set(s);
 
-        var l= i.val().length;
+        var l= i.length;
         if (l>14) l=14;
 
         gauge2.set(l);
@@ -128,23 +160,7 @@ $(document).ready(function () {
         gauge3.set(termsCount-dictTermsCount);
     }
 
-    $("#checkBtn").click(function () {
 
-        var i = $('#pwdInput');
-        var terms = splitToWords(i.val());
-        var removeItem = "";
-
-        terms = jQuery.grep(terms, function(value) {
-            return value != removeItem;
-        });
-        termsCount=terms.length;
-        dictTermsCount=termsCount;
-        console.log(terms);
-        $.each(terms, function( index, value ) {
-            lookupDict(value,updateDict);
-        });
-
-    });
 
     $("#btn3").click(function () {
         var password = $('#pwdInput').val();
