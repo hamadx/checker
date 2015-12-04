@@ -198,7 +198,7 @@ $(document).ready(function () {
             //alert(getWiseCatMessage());
             $("#outputMessage").text("");
             console.log(pwdFlags);
-            $("#outputMessage").append(getWiseCatMessage()).append("<hr>");
+            $("#outputMessage").append(getWiseCatMessage()).append(" <a href='generator.html'>Help me create a safe password</a><hr>");
             unpTest(true);
         }
         var i = pwdInput.val();
