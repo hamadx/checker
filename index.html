@@ -2,18 +2,20 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>Password Meter for Minors</title>
+    <title>Wise Password Cat</title>
     <link rel="stylesheet" href="css/checker.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/res.lang.en.js"></script>
     <script src="js/gauge.min.js"></script>
     <script src="js/checker2.js"></script>
 </head>
 <body>
 <div class="main">
     <div id="logo"></div>
-        <div class="inputBox">
-            <input style="width: 30%" title="Enter password" placeholder="Type your password here..." type="text" id="pwdInput">
+        <div id="inputBox">
+            <input  id="pwdInput" style="display: none; width: 30%" title="Enter password" placeholder="Type your password here..." type="text">
+            <div id="loader"><img src="img/loading.gif"><br>Hold on, I'm loading...</div>
         </div>
     <div class="resultBox">
         <div id="gaugeBar">
@@ -30,7 +32,8 @@
             </figure>
         </div>
         <div class="reactionBox">
-            <div id="label2" style="width: 100%;height: 60px; background-color: #ffe082 "></div>
+            <div id="outputMessage"></div>
+            <div id="dictionary" style="display: none"></div>
         </div>
     </div>
 </div>
