@@ -6,12 +6,13 @@
     <link rel="stylesheet" href="css/material.min.css">
     <script src="js/material.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
+    <link rel="stylesheet" href="css/checker.css">
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/checker.js"></script>
 </head>
 <body>
-<div class="mdl-grid">
+<div class="genBox">
+<div class="mdl-grid" >
     <!-- First Row -->
     <div class="mdl-cell mdl-cell--2-col"></div>
     <div class="mdl-cell mdl-cell--1-col">
@@ -21,24 +22,11 @@
         <form action="#">
             <div class="mdl-textfield mdl-js-textfield" style="width: 100%;">
                 <textarea class="mdl-textfield__input" type="text" rows="2" id="statement"></textarea>
-                <label class="mdl-textfield__label" for="statement">Statement...</label>
+                <label class="mdl-textfield__label" for="statement">Sentence...</label>
 
-                <div class="mdl-tooltip mdl-tooltip--large" for="statement">Instructions for Step 1</div>
+                <div class="mdl-tooltip mdl-tooltip--large" for="statement">Type a long sentence that you can remember. For example: "The boy saved 7 puppies and became a super" *  </div>
             </div>
         </form>
-    </div>
-    <div class="mdl-cell mdl-cell--2-col">
-        <!--<div style="margin: 24px;">-->
-        <!--<button class="mdl-button mdl-js-button mdl-button&#45;&#45;raised mdl-js-ripple-effect mdl-button&#45;&#45;accent"-->
-        <!--&gt;-->
-        <!--Generate-->
-        <!--</button>-->
-        <!--</div>-->
-        <select name="policy">
-            <option value="minor5-10">5 - 10 yo (4 - 6 characters)</option>
-            <option value="minor10-15">10 - 15 yo (8 - 10 characters)</option>
-            <option value="minor15plus">15+ yo (12 - 16 characters)</option>
-        </select>
     </div>
 </div>
 <div class="mdl-grid">
@@ -77,6 +65,7 @@
     <div class="mdl-cell mdl-cell--2-col">
     </div>
 </div>
-
+    <a href="index.html" >Go back</a>
+</div>
 </body>
 </html>

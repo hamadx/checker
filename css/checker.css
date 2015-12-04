@@ -11,6 +11,20 @@ body{
     text-align: center;
 }
 
+.genBox{
+    width: 80%;
+    height:auto;
+    margin: auto;
+    border:3px solid #ff9800;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+}
+.mdl-textfield{
+    text-align: left;
+}
+
 #inputBox{
     height:64px;
 }
